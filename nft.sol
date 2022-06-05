@@ -6,7 +6,7 @@ import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
 
 pragma solidity ^0.8.0;
 
-contract Racing is ERC721Enumerable, Ownable {
+contract REvv is ERC721Enumerable, Ownable {
 
     struct TokenInfo {
         IERC20 paytoken;
@@ -18,12 +18,12 @@ contract Racing is ERC721Enumerable, Ownable {
     using Strings for uint256;
     string public baseURI;
     string public baseExtension = ".json";
-    uint256 public maxSupply = 1000;
+    uint256 public maxSupply = 3000;
     uint256 public maxMintAmount = 5;
     uint256 public cost = 0.1 ether;
     bool public paused = false;
 
-    constructor() ERC721("RacingNFT Collection", "R2R") {}
+    constructor() ERC721("Revv NFT Collection", "Rev") {}
 
     function addCurrency(
         IERC20 _paytoken,
@@ -38,7 +38,7 @@ contract Racing is ERC721Enumerable, Ownable {
     }
 
     function _baseURI() internal view virtual override returns (string memory) {
-    return "ipfs://QmZPoz5xEjNyHhWrxKaWsohaKFFqTrXUz12Sfv7Cy8tHkz/";
+    return "ipfs://QmVpYi8Mwbx6RAcY9sMcUjSGSK1fEKJeVFvBiZd3NmBznF/";
 
     }
 
